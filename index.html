@@ -16,9 +16,9 @@
 			
 			#content { width:800px; margin:0 auto; margin-top:15px;}
 			#content ul { }
-			#content ul li { border:0px solid #000; float:left; margin:10px;}
-			#content ul li a { display:block; padding:45px;}
-			#content ul li  a:hover { background:#ccc;}
+			#content ul li { border:0px solid #000; float:left; margin:10px; filter:alpha(opacity:60); opacity:0.6;}
+			#content ul li a { display:block; padding:45px; }
+			#content ul li  a:hover {}
 			
 			.bgcolor1 {background:#9ddc76;}
 			.bgcolor2 {background:#6caddf;}
@@ -26,7 +26,49 @@
 			.bgcolor4 {background:#cec564;}
 			
 		</style>
+		
+		<script type="text/javascript">
+		window.onload=function(){
+			var aLi=document.getElementsByTagName('li');
+	
+			for(var i=0; i<aLi.length; i++)
+			{
+				aLi[i].alpha=60;
+				aLi[i].onmouseover=function(){
+				startMove(this,100);
+				};
+		
+				aLi[i].onmouseout=function(){
+				startMove(this,60);
+				};
+			}
+	
+		};
 
+
+		function startMove(obj,iTarget)
+		{
+			clearInterval(obj.timer);
+	
+			obj.timer=setInterval(function(){
+				var speed=(iTarget-obj.alpha)/6;
+			
+				speed=speed>0?Math.ceil(speed):Math.floor(speed);
+			
+				if(obj.alpha==iTarget)
+				{
+					clearInterval(obj.timer);
+				}
+				else
+				{
+					obj.alpha+=speed;
+				
+					obj.style.filter='alpha(opacity:'+obj.alpha+')';
+					obj.style.opacity=obj.alpha/100;
+				}
+			},30);
+		}
+		</script>
 　　</head>
 
 　　<body>
