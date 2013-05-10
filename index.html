@@ -9,15 +9,37 @@
 　　　　<title>wulincan</title>
 
 		<style type="text/css">
-			#about { width:800px;height:200px; margin:0 auto; background:#CCC; margin-top:50px; border-radius:4px; font-family:"微软雅黑"; text-align:center; line-height:200px;}
+			div,ul { margin:0; padding:0;}
+			li { list-style-type:none;}
+			a { text-decoration:none; font-weight:bold; font-size:25px; font-family:"黑体"; color:#fff;}
+			#header { width:800px;height:200px; margin:0 auto; background:#3B4757; margin-top:50px; border-radius:4px; font-family:"微软雅黑"; text-align:center; line-height:200px; color:#fff;}
+			
+			#content { width:800px; margin:0 auto; margin-top:15px;}
+			#content ul { }
+			#content ul li { border:0px solid #000; float:left; margin:10px;}
+			#content ul li a { display:block; padding:45px;}
+			#content ul li  a:hover { background:#ccc;}
+			
+			.bgcolor1 {background:#9ddc76;}
+			.bgcolor2 {background:#6caddf;}
+			.bgcolor3 {background:#de75b2;}
+			.bgcolor4 {background:#cec564;}
+			
 		</style>
 
 　　</head>
 
 　　<body>
 
-　　　　<div id="about">欢迎来到我的博客。。。</div>
-
-　　</body>
+　　　　<div id="header">欢迎来到我的博客。。。 &copy; wulincan</div>
+		<div id="content">
+			<ul>
+				<li class="bgcolor1"><a href="javascript:;">JavaScript</a></li>
+				<li class="bgcolor2"><a href="javascript:;">Css</a></li>
+				<li class="bgcolor3"><a href="javascript:;">NodeJs</a></li>
+				<li class="bgcolor4"><a href="javascript:;">JQuery</a></li>
+			</ul>
+		</div>
+	</body>
 
 　　</html>
