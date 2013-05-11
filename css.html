@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<title>wulincan-css</title>
+
+		<style type="text/css">
+			body,html,div,ul,dl,dt,dd,p { margin:0; padding:0;}
+			li { list-style-type:none;}
+			a { text-decoration:none; color:blue;}
+			
+			#header { width:100%; height:50px;font-family:"微软雅黑"; text-indent:2em; line-height:50px; color:#fff;}
+			
+			#nav { width:250px; left:0px; top:125px; position:absolute;}
+			#nav ul { }
+			#nav ul li {  margin:12px;}
+			#nav ul li a { display:block; padding:30px; font-weight:bold; font-size:25px; font-family:"黑体"; color:#fff; text-align:center;}
+			#nav ul li  a:hover {}
+			
+			#content { width:800px; height:600px; margin:0 auto; margin-top:15px; float:right; margin-right:80px;}
+			#content dl { width:800px; border-bottom:1px solid #ccc; border-top:1px solid #ccc; height:200px;}
+			#content dl  dt{ font-size:20px; font-family:"黑体"; padding:10px 10px 0 10px;}
+			#content dl  dt a:hover{ color:#fff;}
+			#content dl  dd { padding:10px 15px 0 15px;}
+			#content dl  dd p { font-size:13px; font-family:"微软雅黑"; line-height:25px;}
+			#content dl  dd span { font-size:12px; color:gray;}
+			#content dl  dd a { float:right; font-size:14px;}
+			#content dl  dd a:hover{ text-decoration:underline; color:red;}
+			
+			.bgcolor1 {background:#9ddc76;}
+			.bgcolor2 {background:#6caddf;}
+			.bgcolor3 {background:#de75b2;}
+			.bgcolor4 {background:#cec564;}	
+
+			.clear { clear:both;}
+
+		</style>
+		
+	<script type="text/JavaScript">
+		window.onload=function(){
+			var oNav=document.getElementById('nav');
+			var aLi=oNav.getElementsByTagName('ul')[0].getElementsByTagName('li');
+			var aDl=document.getElementsByTagName('dl');
+
+			for(var i=0;i<aLi.length;i++)
+			{
+				aLi[i].onmouseover=function(){
+					startMove(this,{width:400});
+				};
+				
+				aLi[i].onmouseout=function(){
+					startMove(this,{width:226});
+				};
+			}
+			
+			for(var i=0;i<aDl.length;i++)
+			{
+				aDl[i].onmouseover=function(){
+					this.style.backgroundColor='#6caddf';
+				};
+				
+				aDl[i].onmouseout=function(){
+					//startMove(this,{backgroundColor:#fff});
+					this.style.backgroundColor='#fff';
+				};
+			}
+
+		};
+		
+		window.onscroll=function(){
+			var oNav=document.getElementById('nav');
+			var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+
+			moveTop(parseInt((document.documentElement.clientHeight-oNav.offsetHeight)/2+scrollTop));
+		};
+</script>
+</head>
+<body>
+		<div id="header" class="bgcolor2">欢迎来到我的博客。。。 &copy; wulincan</div>
+　　　　<div id="nav">
+			<ul>
+				<li class="bgcolor1"><a href="js.html">JavaScript</a></li>
+				<li class="bgcolor2"><a href="css.html">Css</a></li>
+				<li class="bgcolor3"><a href="html5.html">Html5</a></li>
+				<li class="bgcolor4"><a href="nodejs.html">NodeJs</a></li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+		
+		<div id="content">			
+			<dl>
+				<dt>
+					<a href="css_detail.html">前端工程师面试问题列表</a>
+				</dt>
+				<dd>
+					<p>
+						文章来源：伯乐在线
+原文地址：http://blog.jobbole.com/29269/
+前言：@darcyclarke 在 GitHub 上分享了一个 repo，其中包括了不少前端面试问题，可用于检验潜在的候选人。绝不推荐在单个候选人身上用上所用的问题（那样会花费好几个小时滴）。从这个列表选择一些，应该能从候选人身上，检测出你所需要的技能。
+请记住，下面的很多问题都是开放式的，无标准答案，并能引发有趣的讨论。相比直接的答案，相信你在面试前端工程师时，从讨论中你对候选人会了解的更多。
+以下中文译文由@shawnqiang 完成。问题贡献者
+
+@bentruyman (http://bentruyman.com/), @roger_raymond (http://twitter.com/iansym), @ajpiano (http://ajpiano.com/)
+					</p>
+				</dd>
+				<dd>
+					<span>阅读(10) 2013-5-11</span>
+					<a href="css_detail.html">阅读全文</a>
+				</dd>
+			</dl>
+		</div>
+</body>
+
+</html>
+<script type="text/javascript" src="wlcanjs.js"></script>
