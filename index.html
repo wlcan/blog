@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 
 　　<html>
@@ -10,7 +9,6 @@
 　　　　<title>wulincan</title>
 
 		<style type="text/css">
-<<<<<<< HEAD
 			body,html,div,ul { margin:0; padding:0;}
 			li { list-style-type:none;}
 			a { text-decoration:none; font-weight:bold; font-size:25px; font-family:"黑体"; color:#fff;}
@@ -71,16 +69,10 @@
 			},30);
 		}
 		</script>
-=======
-			#about { width:800px;height:200px; margin:0 auto; background:#CCC; margin-top:50px; border-radius:4px; font-family:"微软雅黑"; text-align:center; line-height:200px;}
-		</style>
-
->>>>>>> seconed post
 　　</head>
 
 　　<body>
 
-<<<<<<< HEAD
 　　　　<div id="header">欢迎来到我的博客。。。 &copy; wulincan</div>
 		<div id="content">
 			<ul>
@@ -93,99 +85,3 @@
 	</body>
 
 　　</html>
-=======
-　　　　<div id="about">欢迎来到我的博客。。。</div>
-
-　　</body>
-
-　　</html>
->>>>>>> seconed post
-=======
-<!DOCTYPE html>
-
-　　<html>
-
-　　<head>
-
-　　　　<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-
-　　　　<title>wulincan</title>
-
-		<style type="text/css">
-			div,ul { margin:0; padding:0;}
-			li { list-style-type:none;}
-			a { text-decoration:none; font-weight:bold; font-size:25px; font-family:"黑体"; color:#fff;}
-			#header { width:800px;height:200px; margin:0 auto; background:#3B4757; margin-top:50px; border-radius:4px; font-family:"微软雅黑"; text-align:center; line-height:200px; color:#fff;}
-			
-			#content { width:800px; margin:0 auto; margin-top:15px;}
-			#content ul { }
-			#content ul li { border:0px solid #000; float:left; margin:12px; filter:alpha(opacity:60); opacity:0.6;}
-			#content ul li a { display:block; padding:45px; }
-			#content ul li  a:hover {}
-			
-			.bgcolor1 {background:#9ddc76;}
-			.bgcolor2 {background:#6caddf;}
-			.bgcolor3 {background:#de75b2;}
-			.bgcolor4 {background:#cec564;}
-			
-		</style>
-		
-		<script type="text/javascript">
-		window.onload=function(){
-			var aLi=document.getElementsByTagName('li');
-	
-			for(var i=0; i<aLi.length; i++)
-			{
-				aLi[i].alpha=60;
-				aLi[i].onmouseover=function(){
-				startMove(this,100);
-				};
-		
-				aLi[i].onmouseout=function(){
-				startMove(this,60);
-				};
-			}
-	
-		};
-
-
-		function startMove(obj,iTarget)
-		{
-			clearInterval(obj.timer);
-	
-			obj.timer=setInterval(function(){
-				var speed=(iTarget-obj.alpha)/6;
-			
-				speed=speed>0?Math.ceil(speed):Math.floor(speed);
-			
-				if(obj.alpha==iTarget)
-				{
-					clearInterval(obj.timer);
-				}
-				else
-				{
-					obj.alpha+=speed;
-				
-					obj.style.filter='alpha(opacity:'+obj.alpha+')';
-					obj.style.opacity=obj.alpha/100;
-				}
-			},30);
-		}
-		</script>
-　　</head>
-
-　　<body>
-
-　　　　<div id="header">欢迎来到我的博客。。。 &copy; wulincan</div>
-		<div id="content">
-			<ul>
-				<li class="bgcolor1"><a href="javascript:;">JavaScript</a></li>
-				<li class="bgcolor2"><a href="javascript:;">Css</a></li>
-				<li class="bgcolor3"><a href="javascript:;">Html5</a></li>
-				<li class="bgcolor4"><a href="javascript:;">NodeJs</a></li>
-			</ul>
-		</div>
-	</body>
-
-　　</html>
->>>>>>> eba45bcb65404377f6df06f72c8a0714357b9349
